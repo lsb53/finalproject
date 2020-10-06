@@ -20,15 +20,17 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Title of my project
+# Exploring the phylodynamics of Frog Virus 3
 
-## Introduction and Goals
+## Background
+Ranaviruses (genus = *Ranavirus*) are a group of globally distributed double-stranded DNA viruses capable of infecting many species of ectothermic vertebrates such as amphibians, reptiles, and fishes (Gray and Chinchar 2015). Ranviruses have been implicated in mass die-off events, and indeed, much of our understanding of ranaviruses come from studies of these die-off events. Because of this, the bulk of reserach on ranavirus has been reactionary and near-sighted, and as a result, we lack a longitudinal perspective of ranavirus dynamics. In my reviews of the literature, the longest studies of ranavirus dynamics I have identified have lasted no more than 5 years and are focused on a limited number of field sites (Olori et al. 2018; O'Connor et al. 2016). This limits our ability to parameterize epidemiological models and determine whether a ranavirus-induced die-off event is a call for concern or a natural part of a system’s ecology. To address this gap in the literature, I am interested in analyzing long-term trends in ranavirus infection dynamics in wood frog larvae at the Yale-Myers Forest (YMF). Wood frog larvae are among the most susceptible species to ranavirus, and in previous field studies, ranavirus has been detected at high prevalence at YMF. The Skelly lab has 20 years of demographic data from ~60 wood frog breeding sites, ethanol-preserved larvae samples collected opportunistically from these sites over the past 20 years. These samples can assessed for ranavirus infection using standard molecular methods. **While my initial interests focused on the effects of ranavirus on host population dynamics, this also presents a potential opportunity to study pathogen evolution through time.**
 
-The goal of my project is to answer the question, What is...?
+## Goals
+Because I have no data of my own to address this question and no data exist to directly address this question, my project will largely be an exploratory simulation. Specifically, the goal of my project is to simulate the phylodynamics of Frog virus 3 (FV3) through time across parameter space. These parameters would include things like nucleotide substitution rates, evolutionary selection pressure, and virus replication rate. This can be explored with different regions of the genome, including ones purported to be under strong selection as well as more neutral regions. Ulimately, I hope that this will give me a clearer idea of how much viral evolution one might expect to find over time and determine if this would lead to a worthwhile research avenue once I begin processing preserved specimens collected over a 20-year span.
 
-The methods I will use to do this are...
+## Methods and data
 
-The data I will use are (my own data/ data publicly available at YYY/ simulations)
+I plan to use a program for simulating viral sequence evolution. While I am still in the process of exploring potential programs, one that I have recently identified is SANTA-SIM (Jariani et al. 2019). SANTA-SIM is a software package that can simulate evoltion of a gene population forwards through time. The authors specifically mention that this program is useful for modelling viruses given their proclivity for rapid adaptation and recombination. The data that I will use for my simulations will be publicly available FV3 sequences. There are 43 FV3/FV3-like annoteted genome assemblies available on NCBI (https://www.ncbi.nlm.nih.gov/genome/browse/#!/viruses/4758/). Additionally, there are nucleotide sequences available for different genes such as the major capsid protein. The documentation for SANTA-SIM states that different regions of the genome can be assigned different fitness functions (i.e., purifying vs neutral selection), so it may be a viable option to use a completed genome for this simulation.
 
 ## Methods
 
@@ -48,3 +50,10 @@ If I did these analyses again, I would...
 
 ## References
 
+Gray, M.J., Chinchar, G. V., 2015. Ranaviruses: lethal pathogens of ectothermic vertebrates. Choice Rev. Online 53, 53-1272-53–1272. https://doi.org/10.5860/choice.192841
+
+Olori, J., Netzband, R., McKean, N., Lowery, J., Parsons, K., Windstam, S., 2018. Multi-year dynamics of ranavirus, chytridiomycosis, and co-infections in a temperate host assemblage of amphibians. Dis. Aquat. Organ. 130, 187–197. https://doi.org/10.3354/dao03260
+
+O’Connor, K.M., Rittenhouse, T.A.G., Brunner, J.L., 2016. Ranavirus is Common in Wood Frog (Lithobates sylvaticus) Tadpoles throughout Connecticut , USA. Herpetol. Rev. 47, 394–397.
+
+Jariani, A., Warth, C., Deforche, K., Libin, P., Drummond, A.J., Rambaut, A., Matsen, F.A., Theys, K., 2019. SANTA-SIM: Simulating viral sequence evolution dynamics under selection and recombination. Virus Evol. 5. https://doi.org/10.1093/ve/vez003
