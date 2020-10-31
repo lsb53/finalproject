@@ -7,9 +7,11 @@ This analysis is modified from a study by Firth et al. (2010) that used time-str
 
 ## Files in this folder
 This folder contains the following files:
-- a .xml file 'filename' to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
+- a .xml file `filename` to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
   - a taxa list with 84 taxa names that each are assigned a date (year).
-  - A chunk of code to create a random phylogeny from a coalescent process using an MCMC process, assuming constant population size, and with root height fixed (100 ybp in this file)
+  - A chunk of code to create a random tree from a coalescent process using an MCMC process, assuming constant population size, and with root height fixed (100 ybp in this file). The tip dates are clamped based on the time-of-sampling of each sequence.
+  -A chunk of code to set up the sequence simulation using the Beagle simulator function in BEAST. In this case, it is a HKY model with a strict clock rate (1E-4 subs/site/yr), nucleotide frequences based on the actual data sets used by Firth et al. (2010) (0.18, 0.35, 0.29, 0.18), and kappa (transition/transversion ratios) based on the actual data sets (kappa = 4.91). This creates a 1200 bp nucleotide sequence for each taxa based on the previously generated random tree and saves it as a .fasta file `filename`.
+  -A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a .log file `filename`, a .ops file `filename`, and a .trees file `filename`.
 
 For my project, I will only be conducting the simulation 
 
