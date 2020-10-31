@@ -5,9 +5,11 @@ This folder contains the materials necessary for running a toy analysis that sim
 
 This analysis is modified from a study by Firth et al. (2010) that used time-structured data available in GenBank to estimate evolutionary rates of double-stranded DNA viruses. After using their dsDNA virus datasets to estimate evolutionary rates of seven viruses, they then attempted to validate their estimates. They did this by creating simulation data sets and assessing their ability to recover the nucleotide substitution rates of these sequences with a known evolutionary history across a range of scenarios (ex., differing root heights, substitution rates, nucleotide sequence length, number of samples, strict vs relaxed clock).
 
+For my project, I will only be conducting the simulation portion instead of first estimating substitution rates from real data. This is meant to be an explorative project that helps to inform a sampling potential sampling regime from museum specimens farther down the road.
+
 ## Files in this folder
 This folder contains the following files:
-- a .xml file `filename` to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
+- a `.xml` file `filename` to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
 
   - a taxa list with 84 taxa names that each are assigned a date (year).
   
@@ -15,8 +17,16 @@ This folder contains the following files:
   
   - A chunk of code to set up the sequence simulation using the Beagle simulator function in BEAST. In this case, it is a HKY model with a strict clock rate (1E-4 subs/site/yr), nucleotide frequences based on the actual data sets used by Firth et al. (2010) (0.18, 0.35, 0.29, 0.18), and kappa (transition/transversion ratios) based on the actual data sets (kappa = 4.91). This creates a 1200 bp nucleotide sequence for each taxa based on the previously generated random tree and saves it as a .fasta file `filename`.
   
-  - A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a .log file `filename`, a .ops file `filename`, and a .trees file `filename`.
+  - A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a `.log` file, a `.ops` file, and a `.trees` file.
 
-For my project, I will only be conducting the simulation 
+## Running the analysis with BEAST
+Open `BEAST`. Use the `Choose File...` option to select the `.xml` file. Then press `Run`.
 
-Because my focus virus, Frog Virus 3 (FV3) is also a dsDNA virus.
+## Analyzing the BEAST output
+Use `Tracer` to summarize the parameter estimates from the analysis by uploading the `.log` file. This is where you will find the clock rate (`clock.rate` statistic) that was estimated from the simulation data, as well as other statistics such as root height (`treeModel.rootHeight`). 
+
+You can build the MCC tree from the`.trees` file with `TreeAnnotator`. Set the burn-in as 10% of the total number of iterations used in the analysis (here, 1,000,000), set the Input Tree File as the `.trees` file with the `Choose File...` function, and create a name and save location for the output file (MCC tree) using the `Choose File` function.
+
+You can view the generated MCC tree using `Figtree`.
+
+## How this will be adapted for my project  
