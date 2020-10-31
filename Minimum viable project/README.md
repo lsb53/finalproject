@@ -30,3 +30,10 @@ You can build the MCC tree from the`.trees` file with `TreeAnnotator`. Set the b
 You can view the generated MCC tree using `Figtree`.
 
 ## How this will be adapted for my project  
+I will use the `.xml` file here as the framework for my project. 
+
+First, I will substitute out the HSV-1 taxa with a list of taxa with sampling years relevant to my study sytem (range: 2001 - 2020). I will run the analysis with two separate taxa sets. The small taxa set will consist of one taxa from each year from 2001-2020 (n=20). The large taxa set will consist of five taxa from each year from 2001-2020 (n=100).
+
+For each taxa set, I will generate random phylogenies with a constant population size and two different root heights: 100 and 1000 ybp. 
+
+For simplicity, I plan to use the same substitution model that Firth et al. (2010) determiend to best fit human dsDNA virus data, `HKY`. I will use base frequency rates and transition/transversion ratios for FV3 based on empirical data.
