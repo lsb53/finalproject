@@ -32,23 +32,13 @@ You can view the generated MCC tree using `Figtree`.
 ## How this will be adapted for my project  
 I will use the `.xml` file here as the framework for my project. 
 
-First, I will substitute out the HSV-1 taxa with a list of taxa with sampling years relevant to my study sytem (range: 2001 - 2020). I will run the analysis with two separate taxa sets. The small taxa set will consist of one taxa from each year from 2001-2020 (n=20). The large taxa set will consist of five taxa from each year from 2001-2020 (n=100).
+First, I will substitute out the HSV-1 taxa with a list of taxa with sampling years relevant to my study sytem (range: 2001 - 2020). I will run the analysis with **two separate taxa sets**. The small taxa set will consist of one taxa from each year from 2001-2020 (n=20). The large taxa set will consist of five taxa from each year from 2001-2020 (n=100). For each taxa set, I will simulate **nucleotide sequence sets of two different sizes**: a small nucleotide sequence set typical of a singe-gene alignment(1,200 bp), and a large nucleotide sequence set typcal of a full-genome alignment (100,000 bp).
 
-For each taxa set, I will generate random phylogenies with a constant population size and *two different root heights*: 100 and 1000 ybp. 
+For each taxa set, I will generate random phylogenies with a constant population size and **two different root heights**: 100 and 1000 ybp. 
 
-For simplicity, I plan to use the same substitution model that Firth et al. (2010) used to simulate the human dsDNA virus data, `HKY`. I will use base frequencies and transition/transversion ratios for FV3 based on empirical data.
+For simplicity, I plan to use the same substitution model that Firth et al. (2010) used to simulate the human dsDNA virus data, `HKY`. I will use base frequencies and transition/transversion ratios for FV3 based on empirical data. I will simulate the data with **three different substitution rates** using a strict molecular clock: 1E-4 subs/site/year, 1E-6 subs/site/year, and 1E-8 subs/site/year. These rates represent what might be considered a fast, intermediate, and slow substitution rate, respectively, for a dsDNA virus (Duffy et al. 2008).
 
-I will simulate the data with three different substitution rates using a strict molecular clock: 1E-4 subs/site/year, 1E-6 subs/site/year, and 1E-8 subs/site/year. These rates represent what might be considered a fast, intermediate, and slow substitution rate, respectively, for a dsDNA virus (Duffy et al. 2008).
-
-All things considered, this will result in a total of 
-
-
-
-
-
-
-
-
+All things considered, this will result in a total of 24 test combinations (2 taxa sets X 2 nucleotide sequence size sets X 2 root heights X 3 substitution rates). I will replicate each combination 5 times, resulting in a **total of 120 MCMC analyses of simulated data**.
 
 
 ### References
