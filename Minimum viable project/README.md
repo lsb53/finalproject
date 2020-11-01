@@ -36,4 +36,21 @@ First, I will substitute out the HSV-1 taxa with a list of taxa with sampling ye
 
 For each taxa set, I will generate random phylogenies with a constant population size and two different root heights: 100 and 1000 ybp. 
 
-For simplicity, I plan to use the same substitution model that Firth et al. (2010) determiend to best fit human dsDNA virus data, `HKY`. I will use base frequency rates and transition/transversion ratios for FV3 based on empirical data.
+For simplicity, I plan to use the same substitution model that Firth et al. (2010) used to simulate the human dsDNA virus data, `HKY`. I will use base frequencies and transition/transversion ratios for FV3 based on empirical data.
+
+I will simulate the data with three different substitution rates: 1E-4 subs/site/year, 1E-6 subs/site/year, and 1E-8 subs/site/year. These represent what might be considered a fast, intermediate, and slow substitution rate for a dsDNA virus (Duffy et al. 2008).
+
+
+
+
+
+
+
+
+
+
+
+
+## References
+Duffy, S., L. A. Shackelton, and E. C. Holmes. 2008. Rates of evolutionary change in viruses: Patterns and determinants. Nature Reviews Genetics 9:267–276.
+Firth, C., A. Kitchen, B. Shapiro, M. A. Suchard, E. C. Holmes, and A. Rambaut. 2010. Using time-structured data to estimate evolutionary rates of double-stranded DNA viruses.   Molecular Biology and Evolution 27:2038–2051.
