@@ -51,6 +51,7 @@ I will simulate the data with three different substitution rates: 1E-4 subs/site
 
 
 
-## References
+### References
 Duffy, S., L. A. Shackelton, and E. C. Holmes. 2008. Rates of evolutionary change in viruses: Patterns and determinants. Nature Reviews Genetics 9:267–276.
+
 Firth, C., A. Kitchen, B. Shapiro, M. A. Suchard, E. C. Holmes, and A. Rambaut. 2010. Using time-structured data to estimate evolutionary rates of double-stranded DNA viruses.   Molecular Biology and Evolution 27:2038–2051.
