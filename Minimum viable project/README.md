@@ -17,7 +17,7 @@ This folder contains the following files:
   
   - A chunk of code to set up the sequence simulation using the Beagle simulator function in BEAST. In this case, it is a HKY model with a strict clock rate (1E-4 subs/site/yr), nucleotide frequences based on the actual data sets used by Firth et al. (2010) (0.18, 0.35, 0.29, 0.18), and kappa (transition/transversion ratios) based on the actual data sets (kappa = 4.91). This creates a 1200 bp nucleotide sequence for each taxa based on the previously generated random tree and saves it as a .fasta file `filename`.
   
-  - A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a `.log` file, a `.ops` file, and a `.trees` file (all located in [this folder](https://github.com/lsb53/finalproject/tree/master/Minimum%20viable%20project/BEAST%20simulation%20outputs).
+  - A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a `.log` file, a `.ops` file, and a `.trees` file (all located in [this folder](https://github.com/lsb53/finalproject/tree/master/Minimum%20viable%20project/BEAST%20simulation%20outputs)).
 
 ## Running the analysis with BEAST
 Open `BEAST`. Use the `Choose File...` option to select the `.xml` file. Then press `Run`.
