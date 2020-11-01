@@ -9,7 +9,7 @@ For my project, I will only be conducting the simulation portion instead of firs
 
 ## Files in this folder
 This folder contains the following files:
-- a `.xml` file `filename` to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
+- a `.xml` file [HSV1_SubstitutionRate_1E-4.xml](https://github.com/lsb53/finalproject/blob/master/Minimum%20viable%20project/HSV1_SubstitutionRate_1E-4.xml) to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
 
   - a taxa list with 84 taxa names that each are assigned a date (year).
   
