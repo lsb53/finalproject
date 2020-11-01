@@ -34,13 +34,13 @@ I will use the `.xml` file here as the framework for my project.
 
 First, I will substitute out the HSV-1 taxa with a list of taxa with sampling years relevant to my study sytem (range: 2001 - 2020). I will run the analysis with two separate taxa sets. The small taxa set will consist of one taxa from each year from 2001-2020 (n=20). The large taxa set will consist of five taxa from each year from 2001-2020 (n=100).
 
-For each taxa set, I will generate random phylogenies with a constant population size and two different root heights: 100 and 1000 ybp. 
+For each taxa set, I will generate random phylogenies with a constant population size and *two different root heights*: 100 and 1000 ybp. 
 
 For simplicity, I plan to use the same substitution model that Firth et al. (2010) used to simulate the human dsDNA virus data, `HKY`. I will use base frequencies and transition/transversion ratios for FV3 based on empirical data.
 
-I will simulate the data with three different substitution rates: 1E-4 subs/site/year, 1E-6 subs/site/year, and 1E-8 subs/site/year. These represent what might be considered a fast, intermediate, and slow substitution rate for a dsDNA virus (Duffy et al. 2008).
+I will simulate the data with three different substitution rates using a strict molecular clock: 1E-4 subs/site/year, 1E-6 subs/site/year, and 1E-8 subs/site/year. These rates represent what might be considered a fast, intermediate, and slow substitution rate, respectively, for a dsDNA virus (Duffy et al. 2008).
 
-
+All things considered, this will result in a total of 
 
 
 
