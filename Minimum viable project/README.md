@@ -9,7 +9,7 @@ For my project, I will only be conducting the simulation portion instead of firs
 
 ## Files in this folder
 This folder contains the following files:
-- a `.xml` file `filename` to be used in BEAST software (citation). This XML file runs the entire analysis and contains:
+- a `.xml` file [HSV1_SubstitutionRate_1E-4.xml](https://github.com/lsb53/finalproject/blob/master/Minimum%20viable%20project/HSV1_SubstitutionRate_1E-4.xml) to be used in BEAST software v1.10.4 (Suchard et al. 2018). This XML file runs the entire analysis and contains:
 
   - a taxa list with 84 taxa names that each are assigned a date (year).
   
@@ -17,7 +17,7 @@ This folder contains the following files:
   
   - A chunk of code to set up the sequence simulation using the Beagle simulator function in BEAST. In this case, it is a HKY model with a strict clock rate (1E-4 subs/site/yr), nucleotide frequences based on the actual data sets used by Firth et al. (2010) (0.18, 0.35, 0.29, 0.18), and kappa (transition/transversion ratios) based on the actual data sets (kappa = 4.91). This creates a 1200 bp nucleotide sequence for each taxa based on the previously generated random tree and saves it as a .fasta file `filename`.
   
-  - A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a `.log` file, a `.ops` file, and a `.trees` file.
+  - A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a `.fasta` file, `.tre` file, `.log` file, a `.ops` file, and a `.trees` file (all located in [this folder](https://github.com/lsb53/finalproject/tree/master/Minimum%20viable%20project/BEAST%20simulation%20outputs)).
 
 ## Running the analysis with BEAST
 Open `BEAST`. Use the `Choose File...` option to select the `.xml` file. Then press `Run`.
@@ -45,3 +45,5 @@ All things considered, this will result in a total of 24 test combinations (2 ta
 Duffy, S., L. A. Shackelton, and E. C. Holmes. 2008. Rates of evolutionary change in viruses: Patterns and determinants. Nature Reviews Genetics 9:267–276.
 
 Firth, C., A. Kitchen, B. Shapiro, M. A. Suchard, E. C. Holmes, and A. Rambaut. 2010. Using time-structured data to estimate evolutionary rates of double-stranded DNA viruses.   Molecular Biology and Evolution 27:2038–2051.
+
+Suchard MA, Lemey P, Baele G, Ayres DL, Drummond AJ & Rambaut A (2018) Bayesian phylogenetic and phylodynamic data integration using BEAST 1.10 Virus Evolution 4, vey016. DOI:10.1093/ve/vey016
