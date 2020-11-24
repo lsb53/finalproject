@@ -1,0 +1,164 @@
+---
+title: "Ranavirus simulations- Plotting BEAST outputs"
+author: "Logan Billet"
+date: "11/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(tidyverse)
+library(knitr)
+library(lintr)
+library(readxl)
+```
+
+Read in the data:
+```{r}
+data <- read_excel("BEAST_SimulationOutputs.xlsx")
+data$sim.clockrate <- as.factor(data$sim.clockrate)
+data$sim.rootheight.ybp <- as.factor(data$sim.rootheight.ybp)
+levels(data$sim.rootheight.ybp) <- c("100 ybp", "1000 ybp")
+data$sim.sequence.size <- as.factor(data$sim.sequence.size)
+data$Num.taxa <- as.factor(data$Num.taxa)
+data$sim.replicate <- as.factor(data$sim.replicate)
+```
+
+
+# Getting the data reformatted for plotting
+
+I'm splitting things up into two plots- a 20 taxa plot and a 100 taxa plot. So, I'll make two separate data frames.
+
+First, I'll need to subset the data by Num.taxa, and then by sequence size. This will allow me to plot the data with estimate as the y-axis, simulation clockrate as the x-axis, replicate as the grouping variable. Then I'll dodge the points by clockrate, and facet the data by root height.
+
+First, we'll make the two 20 taxa datasets and plots.
+```{r}
+taxa_20 <- data %>%
+  filter(Num.taxa == '20')
+
+taxa_20_1200bp <- taxa_20 %>%
+  filter(sim.sequence.size == "1200")
+
+taxa_20_100000bp <- taxa_20 %>%
+  filter(sim.sequence.size == "1e+05")
+```
+
+
+
+#BEAST simulation outputs - plotting the data
+
+
+This is the plot for simulations with 20 taxa and 1200 bp nucleotide sequences
+```{r}
+
+taxa20_1200bp_plot <- ggplot(data=taxa_20_1200bp, aes(x= sim.clockrate, y= estimate.clockrate, group = sim.replicate, color=sim.clockrate)) +
+  geom_point(position=position_dodge(width = 1))+
+  labs(y = "Estimated substitution rate (log(subs/site/year))", x = "Simulated substitution rate (subs/site/year)", title = "20 taxa + 1200 bp nucleotide sequences")+
+  facet_wrap(~sim.rootheight.ybp)+
+  #theme(strip.background = element_blank(), strip.placement = "inside")+
+  geom_errorbar(aes(ymin=clockrate.lower95, ymax=clockrate.upper95), position=position_dodge(width = 1))+
+  scale_y_continuous(trans='log2', breaks=c(.00000001, .00000001, .0000001, .000001, .00001, .0001, .001))+
+  geom_hline(yintercept=1e-04, linetype="dashed", color = "blue")+
+  geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
+  geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
+  theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
+  theme_classic(base_size = 16) # theme for a nicer looking figure
+
+
+taxa20_1200bp_plot +  theme(legend.title = element_blank())
+
+```
+
+
+This is the plot for simulations with 20 taxa and 100000 bp nucleotide sequences
+
+```{r}
+
+taxa20_100000bp_plot <- ggplot(data=taxa_20_100000bp, aes(x= sim.clockrate, y= estimate.clockrate, group = sim.replicate, color=sim.clockrate)) +
+  geom_point(position=position_dodge(width = 1))+
+  labs(y = "Estimated substitution rate (log(subs/site/year))", x = "Simulated substitution rate (subs/site/year)", title = "20 taxa + 100000 bp nucleotide sequences")+
+  facet_wrap(~sim.rootheight.ybp)+
+  #theme(strip.background = element_blank(), strip.placement = "inside")+
+  geom_errorbar(aes(ymin=clockrate.lower95, ymax=clockrate.upper95), position=position_dodge(width = 1))+
+  scale_y_continuous(trans='log2', breaks=c(.00000001, .00000001, .0000001, .000001, .00001, .0001, .001))+
+  geom_hline(yintercept=1e-04, linetype="dashed", color = "blue")+
+  geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
+  geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
+  theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
+  theme_classic(base_size = 16) # theme for a nicer looking figure
+
+
+taxa20_100000bp_plot +  theme(legend.title = element_blank())
+```
+
+
+Then, we'll make the 100 taxa datasets and plots
+```{r}
+taxa_100 <- data %>%
+  filter(Num.taxa == '100')
+
+taxa_100_1200bp <- taxa_100 %>%
+  filter(sim.sequence.size == "1200")
+
+taxa_100_100000bp <- taxa_100 %>%
+  filter(sim.sequence.size == "1e+05")
+```
+This is the plot for simulations with 100 taxa and 1200 bp nucleotide sequences
+```{r}
+
+taxa100_1200bp_plot <- ggplot(data=taxa_100_1200bp, aes(x= sim.clockrate, y= estimate.clockrate, group = sim.replicate, color=sim.clockrate)) +
+  geom_point(position=position_dodge(width = 1))+
+  labs(y = "Estimated substitution rate (log(subs/site/year))", x = "Simulated substitution rate (subs/site/year)", title = "100 taxa + 1200 bp nucleotide sequences")+
+  facet_wrap(~sim.rootheight.ybp)+
+  #theme(strip.background = element_blank(), strip.placement = "inside")+
+  geom_errorbar(aes(ymin=clockrate.lower95, ymax=clockrate.upper95), position=position_dodge(width = 1))+
+  scale_y_continuous(trans='log2', breaks=c(.00000001, .00000001, .0000001, .000001, .00001, .0001, .001))+
+  geom_hline(yintercept=1e-04, linetype="dashed", color = "blue")+
+  geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
+  geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
+  theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
+  theme_classic(base_size = 16) # theme for a nicer looking figure
+
+
+taxa100_1200bp_plot +  theme(legend.title = element_blank())
+
+```
+
+
+This is the plot for simulations with 100 taxa and 100000 bp nucleotide sequences
+```{r}
+
+taxa100_100000bp_plot <- ggplot(data=taxa_100_100000bp, aes(x= sim.clockrate, y= estimate.clockrate, group = sim.replicate, color=sim.clockrate)) +
+  geom_point(position=position_dodge(width = 1))+
+  labs(y = "Estimated substitution rate (log(subs/site/year))", x = "Simulated substitution rate (subs/site/year)", title = "100 taxa + 100000 bp nucleotide sequences")+
+  facet_wrap(~sim.rootheight.ybp)+
+  #theme(strip.background = element_blank(), strip.placement = "inside")+
+  geom_errorbar(aes(ymin=clockrate.lower95, ymax=clockrate.upper95), position=position_dodge(width = 1))+
+  scale_y_continuous(trans='log2', breaks=c(.00000001, .00000001, .0000001, .000001, .00001, .0001, .001))+
+  geom_hline(yintercept=1e-04, linetype="dashed", color = "blue")+
+  geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
+  geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
+  theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
+  theme_classic(base_size = 16) # theme for a nicer looking figure
+
+
+taxa100_100000bp_plot +  theme(legend.title = element_blank())
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

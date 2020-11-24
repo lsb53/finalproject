@@ -1,0 +1,14 @@
+
+Operator analysis
+Operator                                          Tuning   Count      Time     Time/Op  Pr(accept) 
+scale(kappa)                                      0.145   91623      7864     0.09     0.2406      
+scale(clock.rate)                                 0.163   275216     22072    0.08     0.241       
+up:nodeHeights(treeModel) down:clock.rate         0.992   275064     50596    0.18     0.2313      
+subtreeSlide(treeModel)                           9.223   2752466    123163   0.04     0.24        
+Narrow Exchange(treeModel)                                2752076    112996   0.04     0.5636      
+Wide Exchange(treeModel)                                  275311     6937     0.03     0.1245      
+wilsonBalding(treeModel)                                  274967     19878    0.07     0.1501      
+scale(treeModel.rootHeight)                       0.142   274475     18670    0.07     0.2401      
+uniform(nodeHeights(treeModel))                           2753697    192896   0.07     0.7334      
+scale(constant.popSize)                           0.581   275105     2083     0.01     0.2364      
+
