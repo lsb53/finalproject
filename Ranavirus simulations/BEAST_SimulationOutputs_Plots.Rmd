@@ -64,7 +64,7 @@ taxa20_1200bp_plot <- ggplot(data=taxa_20_1200bp, aes(x= sim.clockrate, y= estim
   geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
   geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
   theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
-  theme_classic(base_size = 16) # theme for a nicer looking figure
+  theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
 taxa20_1200bp_plot +  theme(legend.title = element_blank())
@@ -87,7 +87,7 @@ taxa20_100000bp_plot <- ggplot(data=taxa_20_100000bp, aes(x= sim.clockrate, y= e
   geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
   geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
   theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
-  theme_classic(base_size = 16) # theme for a nicer looking figure
+  theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
 taxa20_100000bp_plot +  theme(legend.title = element_blank())
@@ -119,7 +119,7 @@ taxa100_1200bp_plot <- ggplot(data=taxa_100_1200bp, aes(x= sim.clockrate, y= est
   geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
   geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
   theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
-  theme_classic(base_size = 16) # theme for a nicer looking figure
+  theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
 taxa100_1200bp_plot +  theme(legend.title = element_blank())
@@ -141,7 +141,7 @@ taxa100_100000bp_plot <- ggplot(data=taxa_100_100000bp, aes(x= sim.clockrate, y=
   geom_hline(yintercept=1e-06, linetype="dashed", color = "green")+
   geom_hline(yintercept=1e-08, linetype="dashed", color = "red")+
   theme(axis.text.y = element_text(colour = "black"), axis.text.x=element_text(colour='black'))+
-  theme_classic(base_size = 16) # theme for a nicer looking figure
+  theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
 taxa100_100000bp_plot +  theme(legend.title = element_blank())
