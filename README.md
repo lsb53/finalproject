@@ -32,11 +32,15 @@ OK, here we go.
 ## Methods and data
 I used BEAST software v1.10.4 (Suchard et al. 2018) for all analyses.
 
-First, I downloaded a `.xml` file provided in the supplement to Firth et al. (2010) to use as template for my project files. The basic components of this file are:
+First, I downloaded a `.xml` file for use with BEAST provided in the supplement to Firth et al. (2010) to use as template for my project files. The basic components of this file are:
   1) a taxa list with taxa names that each are assigned a collection date (year)
   2) A chunk of code to create a random tree from a coalescent process using an MCMC process, assuming constant population size, and with root height fixed. The tip dates are clamped based on the time-of-sampling of each sequence.
   3) A chunk of code to set up the sequence simulation using the Beagle simulator function in BEAST. This includes a substitution model, a clock rate, nucleotide frequencies, and transition/transversion ratios, and a nucleotide sequence length.
   4) A chunk of code that sets up posterior inference on the simulated data set assuming a strict molecular clock, HKY model, and constant population size. This generates a .fasta file, .tre file, .log file, a .ops file, and a .trees file (all located in this folder).
+  
+I set up my `.xml` files to explore a range of scenarios across a fixed sampling time range: 2001 - 2020 (20 yr). I ran the analysis with two separate texa sets to explore the sensitivity of analysis to sample size. The small taxa set consisted of one sample from each year from 2001 - 2020 (n = 20). The large taxaset consisted of five samples frome each year from 2001 - 2020 (n = 100). For each taxa set, I simulated nucleotide sequence sets of two different sizes: a small nucleotide sequence set typical of a singe-gene alignment (1,200 bp), and a large nucleotide sequence set typcal of a full-genome alignment (100,000 bp). 
+
+
  
 ## Methods
 
