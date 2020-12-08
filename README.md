@@ -56,7 +56,9 @@ Each plot contains two panels, one for each root height (100 and 1000 ybp). Thes
 
 ## Results
 
-![GitHub Logo](/Ranavirus%20simulations/Plots/20taxa_1200bp.png)
+
+![20 taxa + 1200bp plot](/Ranavirus%20simulations/Plots/20taxa_1200bp.png)
+**Figure 1.** Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 20 taxa with 1200bp nucleotide sequences. Five replicates were generated for each simulated substitution rate undedr a strict molecular clock evolving at 1.0E-4, 1.0E-6, or 1.0E-8 substitutions/site/year. The colored dashed lines show correspond to the three simulated substitution rates and can be used as a point of reference for the estimated rates of the same color.
 
 ## Discussion
 
