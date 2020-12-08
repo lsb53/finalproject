@@ -70,16 +70,18 @@ Each plot contains two panels, one for each root height (100 and 1000 ybp). Thes
     <em>Fig. 2: Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 20 taxa with 100000bp nucleotide sequences.</em>
 </p>
 
+<p>
+  <img src="/Ranavirus%20simulations/Plots/100taxa_1200bp.png" width="660" height="480" title="100 taxa + 1200bp plot">
+    <br>
+    <em>Fig. 3: Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 1200bp nucleotide sequences.</em>
+</p>
 
 
-![20 taxa + 100000bp plot](/Ranavirus%20simulations/Plots/20taxa_100000bp.png)
-**Figure 2.** Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 20 taxa with 100000bp nucleotide sequences.
-
-![100 taxa + 1200bp plot](/Ranavirus%20simulations/Plots/100taxa_1200bp.png)
-**Figure 3.** Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 1200bp nucleotide sequences.
-
-![100 taxa + 100000bp plot](/Ranavirus%20simulations/Plots/100taxa_100000bp.png)
-**Figure 4.** Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 100000bp nucleotide sequences.
+<p>
+  <img src="/Ranavirus%20simulations/Plots/100taxa_100000bp.png" width="660" height="480" title="100 taxa + 100000bp plot">
+    <br>
+    <em>Fig. 4: Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 100000bp nucleotide sequences.</em>
+</p>
 
 ## Discussion
 
