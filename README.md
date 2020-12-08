@@ -54,15 +54,9 @@ After entering the estimated clock rates ± 95% HPD into a `.xlsx` [file (linked
 
 Each plot contains two panels, one for each root height (100 and 1000 ybp). These plots were used to qualitatively assess the ability of posterior inference to accurately estimate the simulated substitution rate.
 
-
- 
-## Methods
-
-The tools I used were... See analysis files at (links to analysis files).
-
 ## Results
 
-The tree in Figure 1...
+`![GitHub Logo](https://github.com/lsb53/finalproject/blob/master/Ranavirus%20simulations/Plots/20taxa_1200bp.png)`
 
 ## Discussion
 
