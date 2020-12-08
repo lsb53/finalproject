@@ -46,7 +46,13 @@ All things considered, this resulted in a total of 24 test combinations (2 taxa 
 
 After running the simulations, I used Tracer software v1.7.1 (Rambaut et al. 2018) to summarize the parameter estimates from the analysis by uploading the `.log` files. There was a 10% burn in for each file. I then extracted estimated clock rates ± 95% HPD and evaluated mixing and convergence. This was one of the more labor-intensive parts of the project, as I could not figure out a way to efficiently extract the clock rates from each file and organize them into a `.xlsx` file for analysis. Because of this, I ended up opening the five replicate files for each test combination and copy/pasting the estimated clock rates ± 95% HPD into a `.xlsx` file.
 
-After entering the estimated clock rates ± 95% HPD into a `.xlsx` [file (linked here)](https://github.com/lsb53/finalproject/blob/master/Ranavirus%20simulations/BEAST_SimulationOutputs.xlsx), I used R software v4.0.2 (R Core Team 2020) to visualize the data (*ggplot* function, *ggplot2* package; Wickham 2016). The `.rmd` file can be found [here](https://github.com/lsb53/finalproject/blob/master/Ranavirus%20simulations/BEAST_SimulationOutputs_Plots.Rmd). I made four plots, each with *Simulated substitution rate (subs/site/year)* on the x-axis and *Estimated substitution rate (log(subs/site/year))* on the y-axis. The four plots corresponded to the four possible `taxa set X nucleotide sequence length` combinations
+After entering the estimated clock rates ± 95% HPD into a `.xlsx` [file (linked here)](https://github.com/lsb53/finalproject/blob/master/Ranavirus%20simulations/BEAST_SimulationOutputs.xlsx), I used R software v4.0.2 (R Core Team 2020) to visualize the data (*ggplot* function, *ggplot2* package; Wickham 2016). The `.rmd` file can be found [here](https://github.com/lsb53/finalproject/blob/master/Ranavirus%20simulations/BEAST_SimulationOutputs_Plots.Rmd). I made four plots, each with *Simulated substitution rate (subs/site/year)* on the x-axis and *Estimated substitution rate (log(subs/site/year))* on the y-axis. The four plots correspond to the four possible `taxa set X nucleotide sequence length` combinations:
+  1) 20 taxa + 1,200 bp nucleotide sequences
+  2) 20 taxa + 100,000 bp nucleotide sequences
+  3) 100 taxa + 1,200 bp nucleotide sequences
+  4) 100 taxa + 100,000 bp nucleotide sequences
+Each plot contains two panels, one for each root height (100 and 1000 ybp).
+
 
  
 ## Methods
