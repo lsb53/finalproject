@@ -66,7 +66,7 @@ Each plot contains two panels, one for each root height (100 and 1000 ybp). Thes
 ![100 taxa + 1200bp plot](/Ranavirus%20simulations/Plots/100taxa_1200bp.png)
 **Figure 3.** Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 1200bp nucleotide sequences.
 
-![100 taxa + 100000bp plot](/Ranavirus%20simulations/Plots/100taxa_1200bp.png)
+![100 taxa + 100000bp plot](/Ranavirus%20simulations/Plots/100taxa_100000bp.png)
 **Figure 4.** Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 100000bp nucleotide sequences.
 
 ## Discussion
