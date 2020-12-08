@@ -73,6 +73,8 @@ When the number of nucleotides per taxa is increased from 1,200 to 100,000bp, po
     <em>Fig. 2: Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 20 taxa with 100000bp nucleotide sequences.</em>
 </p>
 
+When sequences were generated under a strict molecular clock with 100 taxa and 1200bp nucleotide sequences,
+
 <p>
   <img src="/Ranavirus%20simulations/Plots/100taxa_1200bp.png" width="660" height="480" title="100 taxa + 1200bp plot">
     <br>
