@@ -51,7 +51,8 @@ After entering the estimated clock rates ± 95% HPD into a `.xlsx` [file (linked
   2) 20 taxa + 100,000 bp nucleotide sequences
   3) 100 taxa + 1,200 bp nucleotide sequences
   4) 100 taxa + 100,000 bp nucleotide sequences
-Each plot contains two panels, one for each root height (100 and 1000 ybp).
+
+Each plot contains two panels, one for each root height (100 and 1000 ybp). These plots were used to qualitatively assess the ability of posterior inference to accurately estimate the simulated substitution rate.
 
 
  
