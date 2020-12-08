@@ -73,7 +73,7 @@ When the number of nucleotides per taxa is increased from 1,200 to 100,000bp, po
     <em>Fig. 2: Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 20 taxa with 100000bp nucleotide sequences.</em>
 </p>
 
-When sequences are generated under a strict molecular clock with 100 taxa and 1200bp nucleotide sequences, the posterior estimates are qualitatively similar to those from the simulation with 20 taxa and 1200bp sequences (Fig 3). The main difference is that the 95% HDPs for the simulated substitution rate of 1.0E-4 subs/site/year for the 100 taxa simulation are tighter than those from the 20 taxa simulation. As before, for both root heights at 1.0E-6 and 1.0E-8 subs/site/year, the mean estimated substitution rates were much higher than the true value with long-tailed posterior distributions tending toward zero.
+When sequences are generated under a strict molecular clock with 100 taxa and 1200bp nucleotide sequences, the posterior estimates are qualitatively similar to those from the simulation with 20 taxa and 1200bp sequences (Fig. 3). The main difference is that the 95% HDPs for the simulated substitution rate of 1.0E-4 subs/site/year for the 100 taxa simulation are tighter than those from the 20 taxa simulation. As before, for both root heights at 1.0E-6 and 1.0E-8 subs/site/year, the mean estimated substitution rates were much higher than the true value with long-tailed posterior distributions tending toward zero.
 
 <p>
   <img src="/Ranavirus%20simulations/Plots/100taxa_1200bp.png" width="660" height="480" title="100 taxa + 1200bp plot">
@@ -81,7 +81,7 @@ When sequences are generated under a strict molecular clock with 100 taxa and 12
     <em>Fig. 3: Substitution rates (posterior mean and 95% HPD) estimated from synthetic data sets based on a data set of 100 taxa with 1200bp nucleotide sequences.</em>
 </p>
 
-When sequences are generated under a strict molecular clock with 100 taxa and 100,000bp nucleotide sequences, posterior inference was able to recover accurate nucleotide substitution rates with narrow 95% HPDs for all five replicates when the simulated substitution rate was 1.0E-4 or 1.0E-4 subs/site/year, regardless of root height. Although closer to the true value than in any of the other simulations, for the simulations with 1.0E-8 subs/site/year the mean estimated substitution rates were higher than the true value with long-tailed posterior distributions tending toward zero.
+When sequences are generated under a strict molecular clock with 100 taxa and 100,000bp nucleotide sequences, posterior inference was able to recover accurate nucleotide substitution rates with narrow 95% HPDs for all five replicates when the simulated substitution rate was 1.0E-4 or 1.0E-4 subs/site/year, regardless of root height (Fig. 4). Although closer to the true value than in any of the other simulations, for the simulations with 1.0E-8 subs/site/year the mean estimated substitution rates were higher than the true value with long-tailed posterior distributions tending toward zero.
 
 <p>
   <img src="/Ranavirus%20simulations/Plots/100taxa_100000bp.png" width="660" height="480" title="100 taxa + 100000bp plot">
