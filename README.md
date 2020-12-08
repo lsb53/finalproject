@@ -56,7 +56,7 @@ Each plot contains two panels, one for each root height (100 and 1000 ybp). Thes
 
 ## Results
 
-`![GitHub Logo](https://github.com/lsb53/finalproject/blob/master/Ranavirus%20simulations/Plots/20taxa_1200bp.png)`
+![GitHub Logo](/Ranavirus%20simulations/Plots/20taxa_1200bp.png)
 
 ## Discussion
 
