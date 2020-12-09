@@ -67,8 +67,13 @@ taxa20_1200bp_plot <- ggplot(data=taxa_20_1200bp, aes(x= sim.clockrate, y= estim
   theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
-taxa20_1200bp_plot +  theme(legend.title = element_blank())
+final.taxa20_1200bp_plot<-taxa20_1200bp_plot +  theme(legend.title = element_blank())
 
+```
+
+- This code chunk saves the previous plot
+```{r}
+ggsave(plot = final.taxa20_1200bp_plot, filename="G:/My Drive/Yale/Courses- Fall 2020/Phylogenetic biology/Project/finalproject/Ranavirus simulations/Plots/20taxa_1200bp.png", width = 11, height = 8)
 ```
 
 
@@ -90,7 +95,12 @@ taxa20_100000bp_plot <- ggplot(data=taxa_20_100000bp, aes(x= sim.clockrate, y= e
   theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
-taxa20_100000bp_plot +  theme(legend.title = element_blank())
+final.taxa20_100000bp_plot <- taxa20_100000bp_plot +  theme(legend.title = element_blank())
+```
+
+- This code chunk saves the previous plot
+```{r}
+ggsave(plot = final.taxa20_100000bp_plot, filename="G:/My Drive/Yale/Courses- Fall 2020/Phylogenetic biology/Project/finalproject/Ranavirus simulations/Plots/20taxa_100000bp.png", width = 11, height = 8)
 ```
 
 
@@ -105,6 +115,8 @@ taxa_100_1200bp <- taxa_100 %>%
 taxa_100_100000bp <- taxa_100 %>%
   filter(sim.sequence.size == "1e+05")
 ```
+
+
 This is the plot for simulations with 100 taxa and 1200 bp nucleotide sequences
 ```{r}
 
@@ -122,9 +134,15 @@ taxa100_1200bp_plot <- ggplot(data=taxa_100_1200bp, aes(x= sim.clockrate, y= est
   theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
-taxa100_1200bp_plot +  theme(legend.title = element_blank())
+final.taxa100_1200bp_plot <- taxa100_1200bp_plot +  theme(legend.title = element_blank())
 
 ```
+
+- This code chunk saves the previous plot
+```{r}
+ggsave(plot = final.taxa100_1200bp_plot, filename="G:/My Drive/Yale/Courses- Fall 2020/Phylogenetic biology/Project/finalproject/Ranavirus simulations/Plots/100taxa_1200bp.png", width = 11, height = 8)
+```
+
 
 
 This is the plot for simulations with 100 taxa and 100000 bp nucleotide sequences
@@ -144,11 +162,14 @@ taxa100_100000bp_plot <- ggplot(data=taxa_100_100000bp, aes(x= sim.clockrate, y=
   theme_classic(base_size = 14) # theme for a nicer looking figure
 
 
-taxa100_100000bp_plot +  theme(legend.title = element_blank())
+final.taxa100_100000bp_plot <- taxa100_100000bp_plot +  theme(legend.title = element_blank())
 
 ```
 
-
+- This code chunk saves the previous plot
+```{r}
+ggsave(plot = final.taxa100_100000bp_plot, filename="G:/My Drive/Yale/Courses- Fall 2020/Phylogenetic biology/Project/finalproject/Ranavirus simulations/Plots/100taxa_100000bp.png", width = 11, height = 8)
+```
 
 
 
